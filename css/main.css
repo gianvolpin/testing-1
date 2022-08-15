@@ -30,36 +30,42 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid rgb(144, 131, 112);
 }
 
-#index{
+#index-page{
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-areas: "header"
                          "main"
+                         "main-index"
                          "footer";
     grid-template-rows: 4rem;
 }
 
-header{
+#index-page header{
     grid-area: header;
-
 }
 
-.main-encabezado{
+#index-page .main-encabezado{
     grid-area: main;
 }
 
-footer{
+#index-page main{
+    grid-area: main-index;
+    height: auto;
+}
+
+#index-page footer{
     grid-area: footer;
 }
 
 main{
     display: grid;
     width: 100%;
-    height: 100%;
-    grid-template-areas: "main"
+    height: auto;
+    grid-template-areas: "main-top"
                          "img"
                          "media";
+    
     
 }
 .img{
@@ -70,14 +76,22 @@ div.videohome{
     grid-area: media;
 }
 
+main div.main-index-text {
+    text-align: center;
+    width: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+    padding-bottom: 3rem;
+}
 
-
+main .container-img-index .img-index .container-img p{
+    height: 2rem;
+}
 
 
 
 header nav{
-    background-color: bisque;
+    background-color: rgb(0, 0, 0);
     height: 80px;
     width: 100%;
     border-bottom: #a6a6a6 1px solid;
@@ -205,7 +219,7 @@ main div.container-img-index{
 main div.img-index{
     background-color: rgba(0, 0, 0, 0);
     width: 80%;
-    height: 50rem;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,8 +235,9 @@ main .container-img-index .img-index .container-img{
     background-color: #f09819;
     border-radius: 15px 15px;
     padding-top: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 40%;
     margin-top: auto;
+    height: auto;
 }
 
 
@@ -232,6 +247,7 @@ main .container-img-index .img-index .container-img{
     padding: 5px;
     align-items: center;
     row-gap: 1rem;
+    height: ;
 }
 
 .container-img img{
@@ -243,7 +259,8 @@ main .container-img-index .img-index .container-img{
     
 }
 .container-img p{
-    width: 80%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -323,7 +340,7 @@ footer p a{
     margin: auto;
     margin-top: 80px;
     width: 80%;
-    position: relative;
+    
 
 }
   
@@ -367,9 +384,11 @@ footer p a{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    vertical-align: middle;
     border-radius: 5px;
+    transition: all .2s ease-in-out;
+    display: block;
 }
+
 
 .image-gallery::after {
     content: "";
@@ -382,7 +401,14 @@ footer p a{
     cursor: pointer;
 }
 
-.overlay {
+.image-gallery li img:hover { 
+    transform: scale(1.5); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+
+/* .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -393,17 +419,17 @@ footer p a{
     transition: all 0.2s 0.1s ease-in-out;
     color: #fff;
     border-radius: 5px;
-    /* center overlay text */
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
-  
+   */
 /* hover */
-.image-gallery li:hover .overlay {
+/* .image-gallery li:hover .overlay {
     transform: scale(1);
 }
-
+ */
 
 /* Community page */
 
@@ -494,12 +520,15 @@ main .rules-box ul li p{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
-    
+    gap: 2rem;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;    
 }
 
 .sv-content{
     width: 300px;
+    height: 400px;
     background-color: rgb(218, 202, 180);
     border-style: solid;
     border-radius: 20px;
@@ -548,10 +577,13 @@ main .rules-box ul li p{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    float: right;
-
 
 }
+
+.wbox-button{
+    float: right;
+}
+
 
 .button-sv:hover {
     background-position: right center;
@@ -641,9 +673,10 @@ main .rules-box ul li p{
     width: 100%;
     z-index: 9;
     border: 0;
-    transition: box-shadow .2s;
 }
-  
+
+
+
 .button-42:hover {
     box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
@@ -718,9 +751,7 @@ main .rules-box ul li p{
 /* Desktop */
 @media only screen and (min-width: 769px){
 
-    *{
-        font-size: 1;
-    }
+    
 
     div.bloque{
         width: 225px;
@@ -747,7 +778,7 @@ main .rules-box ul li p{
     .encabezado p{
        width: 60%;
        margin-left:20%;
-       height: 15rem;
+       height: auto;
        font-size: 23px;
     }
 
@@ -783,8 +814,8 @@ main .rules-box ul li p{
     
 
     .videohome{
-        width: 30%;
-        height: 30%;
+        width: 50%;
+        height: 50%;
     }
 
     /* index */
@@ -794,24 +825,21 @@ main .rules-box ul li p{
     main div.container-img-index{
         display: flex;
         justify-content: center;
-        height: 300px;
+        height: auto;
     
     }
     
     main div.img-index{
         background-color: rgba(0, 0, 0, 0);
         width: 80%;
-        height: 16rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 100%;
+
         flex-direction: row;
-        row-gap: 5%;
-        margin-bottom: 3rem;
+
     
     }
     
-    main h2{
+    main div .main-index-text{
         text-align: center;
         font-size: 1.4rem;
         padding-bottom: 3rem;
@@ -819,15 +847,19 @@ main .rules-box ul li p{
 
     main .container-img-index .img-index .container-img p{
         text-align: center;
+        font-size: 1.2rem;
+        padding: 1.2rem;
+        height: 150px;
     }
     
     main .container-img-index .img-index .container-img{
         display: flex;
         flex-direction: column;
-        background-color: rgb(226, 204, 176);
-        border: 1.2px solid black;
+        /* background-color: rgba(235, 193, 137); */
+        /* border: 1.2px solid black; */
         margin-left: 5px;
         margin-right: 5px;
+        padding: 15px 0px;
     }
     
     
@@ -860,6 +892,15 @@ main .rules-box ul li p{
         width: 100%;
         justify-content: center;
     }
+
+
+    /* server page desktop */
+
+    div.main-encabezado div.encabezado p{
+        width: 60%;
+    }
+
+
 
 }
 
