@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration: none;
+    text-decoration: none !important;
     list-style: none;
     box-sizing: border-box;
 }
@@ -79,7 +79,7 @@ div.videohome{
 main div.main-index-text {
     text-align: center;
     width: auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 
     padding-bottom: 3rem;
 }
@@ -124,7 +124,7 @@ header nav{
 .navheader ul li a{
     color: #fff;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif !important; 
     padding: 7px 20px;
     border-radius: 2px;
     text-transform: none;
@@ -172,7 +172,7 @@ header nav{
 
 .main-encabezado{
     padding: 40px 0;
-    font-family: 'Oswald', sans-serif
+    font-family: 'Oswald', sans-serif !important;
 }
 
 .encabezado{
@@ -247,7 +247,6 @@ main .container-img-index .img-index .container-img{
     padding: 5px;
     align-items: center;
     row-gap: 1rem;
-    height: ;
 }
 
 .container-img img{
@@ -260,7 +259,7 @@ main .container-img-index .img-index .container-img{
 }
 .container-img p{
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 
@@ -606,7 +605,7 @@ main .rules-box ul li p{
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
@@ -656,7 +655,7 @@ main .rules-box ul li p{
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif !important;
     height: 30px;
     line-height: 30px;
     outline: 0;
@@ -680,6 +679,45 @@ main .rules-box ul li p{
 .button-42:hover {
     box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
+
+
+/* Boostrap */
+
+/*  */
+.bg-color-my-p{
+    background-color: black;
+}
+
+/* navbar */
+
+.navbar-nav a{
+    border-radius: 25px;
+}
+
+.nav-hover-p:hover{
+    background: #cc7b00;
+    transition: .5s;
+}
+
+.active{
+    color: #eebe76 !important;
+}
+
+/* others */
+
+.discord-text-pers{
+    color: #7289da;   
+}
+
+.discord-text-pers:hover{
+    border-bottom: #7289da 2px solid;
+}
+
+
+
+
+
+
 
 /* Mobile */
 
