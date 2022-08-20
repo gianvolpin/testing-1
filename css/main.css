@@ -308,16 +308,27 @@ footer{
 
 footer .footer-icons{
     margin-top: 4rem;
+    display: flex;
     justify-content: space-evenly;
+    flex-flow: row;
 }
+
+
 
 footer .derechos{
     background-color: #f09819;
 }
 
+
 footer a{
     color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
 }
+
+
+
 
 footer p a{
     color: #c85000;
@@ -384,8 +395,9 @@ footer p a{
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    transition: all .2s ease-in-out;
+    
     display: block;
+    
 }
 
 
@@ -400,11 +412,15 @@ footer p a{
     cursor: pointer;
 }
 
-.image-gallery li img:hover { 
+.image-gallery li:hover{ 
     transform: scale(1.5); 
+    z-index: 10;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
+    transition: all .2s ease-in-out;
+    
 }
+
 
 
 /* .overlay {
@@ -432,19 +448,29 @@ footer p a{
 
 /* Community page */
 
+
+
+
+
+
+
+
 .encabezado-cmm{
     margin-left: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .encabezado-cmm#cmm1 h3{
-    font-size: 25px;
+    font-size: 2rem;
     padding-bottom: 25px;
+    font-weight: bold;
 }
+
 .encabezado-cmm#cmm1 p{
     width: 80%;
     padding-bottom: 25px;
-
+    height: auto;
+    font-size: 1.2rem;
 }
 
 .main-button-cmm{
@@ -484,20 +510,16 @@ footer p a{
 main .rules-box{
     width: 90%;
     height: 400px;
-    background-color: rgb(226, 211, 192);
+    background-color: rgb(218, 209, 200);
     margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    padding-top: 1.5rem;
+    border-radius: 15px;
 }
 
-main .rules-box ul{
-    
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
 
-main .rules-box ul li h4{
+main .rules-box h4{
     
     height: 3rem;
     font-size: 1.5rem;
@@ -505,13 +527,53 @@ main .rules-box ul li h4{
     /* margin-bottom: ; */
 }
 
-
-main .rules-box ul li p{
+main .rules-box p{
     margin-left: 5%;
-    width: 95%;
+    margin-right: 5%;
+    height: 60%;
+}
+
+main .rules-box .button-rules-box{
+    float: right;
+    padding-right: 2rem;
+    padding-bottom: 1.7rem;
+
+}
+main .rules-box .button-rules-box button{
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 35px;
 }
 
 /* server page */
+
+
+#servidores-page{
+    display: grid;
+    grid-template-areas: "header"
+                         "sv-main"
+                         "footer";
+
+    grid-template-rows: 4;
+}
+
+#servidores-page header{
+    grid-area: header;
+}
+
+#servidores-page .section-sv-main{
+    grid-area: sv-main;
+}
+
+
+#servidores-page footer{
+    grid-area: footer;
+    
+}
+
+
+
+
 
 
 
@@ -534,11 +596,13 @@ main .rules-box ul li p{
     border-color: darkgrey;
     border-width: 4px;
     margin: 15px;
-    overflow: hidden;
+    
 }
 
 .sv-content h3, .sv-content p{
     padding-left: 1rem;
+    height: 8.5rem;
+    overflow: hidden;
 }
 
 
@@ -560,16 +624,15 @@ main .rules-box ul li p{
 
 .button-sv {
     margin: 15px;
-    padding: 15px 30px;
+    padding: 15px 15px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
-    background-size: 200% auto;
+    background-size: 100% auto;
     color: white;
-    border-radius: 10px;
-    display: flex;
+    border-radius: 25px;
     border: 0px;
-    font-weight: 700;
+    font-weight: 500;
     box-shadow: 0px 0px 14px -7px #f09819;
     background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
     cursor: pointer;
@@ -577,10 +640,14 @@ main .rules-box ul li p{
     -webkit-user-select: none;
     touch-action: manipulation;
 
+
+
 }
 
 .wbox-button{
-    float: right;
+    
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -714,8 +781,25 @@ main .rules-box ul li p{
 }
 
 
+/*  */
 
+.overlay{
+    position: absolute;
+}
 
+.overlay p{
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #000, 0 0 20px #000;
+    inset: 0 0 5px #000,0 0 20px #000;
+    font-weight: bold;
+}
+
+.sv-content p{
+    padding-top: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 1.2rem;
+}
 
 
 
@@ -723,10 +807,7 @@ main .rules-box ul li p{
 
 @media only screen and (min-width: 320px) and (max-width: 425px){
 
-    .servidores-html{
-        font-size: 1.3rem;
 
-    }
 
     .button-game{
         display: flex;
