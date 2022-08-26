@@ -410,6 +410,7 @@ footer p a{
     /* ... */
     position: relative;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
 .image-gallery li:hover{ 
@@ -417,7 +418,7 @@ footer p a{
     z-index: 10;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
-    transition: all .2s ease-in-out;
+    
     
 }
 
@@ -596,7 +597,12 @@ main .rules-box .button-rules-box button{
     border-color: darkgrey;
     border-width: 4px;
     margin: 15px;
-    
+    transition: 0.5s;
+    box-shadow: 5px #000;
+}
+
+.sv-content:hover{
+    transform: scale(1.1);
 }
 
 .sv-content h3, .sv-content p{
@@ -606,19 +612,42 @@ main .rules-box .button-rules-box button{
 }
 
 
+/*  */
 
+
+.hover-card-1{
+    transition: 0.2s;
+
+}
+.hover-card-1:hover{
+    transform: scale(1.1);
+    
+}
+
+.text-custom-1{
+    color: #E62C03;
+    font-weight: bold;
+}
+
+.border-custom-1:hover{
+    box-shadow: rgb(253, 36, 36) 0px 30px 60px -12px inset, rgba(255, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+    box-shadow: rgba(255, 0, 0, 0.56) 0px 22px 70px 4px !important;
+}
 
 /* imagenes */
 
+
+
 .sv-main .sv-content img{
     width: 100%;
-    
+    border-radius: 15px 15px 0px 0px;
     
 }
 
 .current-page{
     display: none;
 }
+
 
 /* Boton-sv */
 
@@ -801,7 +830,13 @@ main .rules-box .button-rules-box button{
     margin-right: 1.2rem;
 }
 
+/* ~ */
 
+
+
+
+
+/* ~ */
 
 /* Mobile */
 
@@ -1027,78 +1062,36 @@ main .rules-box .button-rules-box button{
 
 /* Tablet */
 @media only screen and (min-width: 426px) and (max-width: 768px){
-    .checkbtn{
-        display: block;
-    }
-
-    .enlace-logo{
-        padding-left: 10px;
-    }
-
-
-    header{
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    .ulmenu{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background-color: gray;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        z-index: 100;
-    }
-    nav .ulmenu li{
-        display: block;
-        text-align: center;
-    }
-    
-    #check:checked ~ ul{
-        left:0;
-    }
 
     hr .border-r{
         display: none;
     }
 
-    main div.img-index{
-        height: 65rem;
-        padding: 2rem;
-    }
-
-    #index{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-areas: "header header"
-                             "text main"
-                             "footer footer";
     
+
+    main .container-img-index .img-index .container-img{
+        height: 650px;
     }
 
-    div .main-encabezado{
-        grid-area: text;
+    main .container-img-index .img-index .container-img p{
+        padding-left: 20%;
+        padding-right: 20%;
+        font-size: 1.1rem;
     }
 
-    header{
-        grid-area: header;
+    #index-head-1 div h3{
+        font-size: 3rem;
     }
 
-    main{
-        grid-area: main;
-    }
-
-    footer{
-        grid-area: footer;
+    .encabezado h2{
+        font-size: 2rem;
     }
 
 
-    /* HACER DESPUES T-T */
+    .encabezado p{
+        font-size: 1.2rem;
+    }
 
-
+    
     
 }
