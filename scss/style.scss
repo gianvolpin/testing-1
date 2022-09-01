@@ -34,13 +34,6 @@
 
 
 
-
-
-
-
-
-// 
-
 * {
 	padding: 0;
 	margin: 0;
@@ -63,9 +56,6 @@ body {
 		background-color: rgb(169, 169, 169);
 		outline: 1px solid rgb(144, 131, 112);
 	}
-}
-.color-1{
-	color: rgb(255, 0, 221);
 }
 #index-page {
 	display: grid;
@@ -139,6 +129,16 @@ main {
 		margin-top: 5%;
 		padding-top: 1.5rem;
 		border-radius: 15px;
+		h4 {
+			height: 3rem;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		p {
+			margin-left: 5%;
+			margin-right: 5%;
+			height: 60%;
+		}
 		.button-rules-box {
 			float: right;
 			padding-right: 2rem;
@@ -602,9 +602,9 @@ footer {
 	}
 }
 .nav-hover-p {
-	transition: 0.5s;
 	&:hover {
 		background: #cc7b00;
+		transition: .5s;
 	}
 }
 .active {
@@ -649,6 +649,19 @@ footer {
 		position: sticky;
 		top: 0;
 		z-index: 100;
+	}
+	.ulmenu {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: gray;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+		display: block;
+		z-index: 100;
+	}
 	#check {
 		&:checked {
 			~ {
@@ -828,5 +841,4 @@ footer {
 			font-size: 1.2rem;
 		}
 	}
-}
 }
