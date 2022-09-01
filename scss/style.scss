@@ -122,7 +122,7 @@ main {
 	}
 	.rules-box {
 		width: 90%;
-		height: 400px;
+		height: 30rem;
 		background-color: rgb(218, 209, 200);
 		margin-left: 5%;
 		margin-right: 5%;
@@ -137,7 +137,9 @@ main {
 		p {
 			margin-left: 5%;
 			margin-right: 5%;
-			height: 60%;
+			height: 18rem;
+			font-size: 1.1rem;
+			
 		}
 		.button-rules-box {
 			float: right;
@@ -149,6 +151,14 @@ main {
 				border-radius: 35px;
 			}
 		}
+	}
+}
+.img-p{
+	img{
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+		height: 100%;
 	}
 }
 .img {
@@ -627,6 +637,12 @@ footer {
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 425px) {
+	.rules-box{
+		height: auto;
+		
+	}
+	
+	
 	.button-game {
 		display: flex;
 		justify-content: center;
@@ -650,18 +666,6 @@ footer {
 		top: 0;
 		z-index: 100;
 	}
-	.ulmenu {
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background-color: gray;
-		top: 80px;
-		left: -100%;
-		text-align: center;
-		transition: all .5s;
-		display: block;
-		z-index: 100;
-	}
 	#check {
 		&:checked {
 			~ {
@@ -679,6 +683,7 @@ footer {
 	.current-page {
 		display: none;
 	}
+	
 }
 @media only screen and (min-width: 769px) {
 	div.bloque {
