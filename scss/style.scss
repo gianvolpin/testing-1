@@ -4,6 +4,7 @@
 @import "base/extend";
 
 
+
 // para desafio
 
 // h4 {
@@ -40,6 +41,7 @@
 	text-decoration: none !important;
 	list-style: none;
 	box-sizing: border-box;
+	
 }
 html {
 	scroll-behavior: smooth;
@@ -96,7 +98,7 @@ main {
 				}
 				display: flex;
 				flex-direction: column;
-				background-color: #f09819;
+				background-color: #f0b665;
 				border-radius: 15px 15px;
 				padding-top: 5%;
 				padding-bottom: 40%;
@@ -274,6 +276,61 @@ div.bloque {
 	p {
 		text-align: center;
 		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+	}
+}
+
+#reglas{
+	
+	@extend %margin-x-10;
+	div{
+		.nav-link.active{
+			background-color: #e4be6e;
+		}
+		.rules-custom{
+			background-color: rgba(0, 0, 0, 0.05);
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 0.5rem;
+			height: 400px;
+			overflow: hidden;
+			border-radius: 10px;
+		}
+		.pding-1{
+
+			background-color: #00000007;
+		}
+		@media only screen and (max-width: 575px) {
+			.pding-1{
+				padding-right: 0rem;
+				padding-bottom: 0rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+		div{
+			button:active{
+				background-color: #f1a239;
+			}
+		}
+		
+
+		.nav-link{
+			color: rgb(0, 0, 0)!important;
+			$component-active-bg: orange;
+			:active{
+				
+			}
+		}
+		button{
+			:active{
+				
+			}
+		}
+		h3{
+			color: #000;
+		}
+		p{
+			color: #000;
+		}
 	}
 }
 .videohome {
@@ -468,7 +525,8 @@ footer {
 	text-transform: uppercase;
 	transition: 0.5s;
 	background-size: 100% auto;
-	color: white;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
 	border-radius: 25px;
 	border: 0px;
 	font-weight: 500;
@@ -485,6 +543,12 @@ footer {
 	}
 	&:active {
 		transform: scale(0.95);
+	}
+	a{
+		color: #000;
+	}
+	a:hover{
+		color: #000;
 	}
 }
 .wbox-button {
@@ -574,13 +638,14 @@ footer {
 }
 .navbar-nav {
 	a {
-		border-radius: 25px;
+		border-radius: 10px;
 	}
 }
 .nav-hover-p {
+	transition: 0s;
 	&:hover {
 		background: #cc7b00;
-		transition: .5s;
+		
 	}
 }
 .active {
@@ -591,6 +656,14 @@ footer {
 	&:hover {
 		border-bottom: #7289da 2px solid;
 	}
+}
+.discord-text-pers-2{
+	color: #7289da;
+	font-size: 2rem;
+	&:hover {
+		border-bottom: #7289da 2px solid;
+	}
+	
 }
 .overlay {
 	position: absolute;
@@ -660,7 +733,7 @@ footer {
 	margin-left: 1.5rem;
 	margin-top: 1.5rem;
 	
-	h3 {
+	h1 {
 		font-size: 2rem;
 		padding-bottom: 25px;
 		font-weight: bold;
@@ -705,12 +778,7 @@ footer {
 
 @media only screen and (min-width: 769px) {
 
-	#reglas{
-		display: grid;
-		grid-template-areas: "boton reglas reglas"
-							 "boton reglas reglas"
-							 "boton reglas reglas";
-	}
+	
 
 	
 

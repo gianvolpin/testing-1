@@ -1,7 +1,7 @@
 .rules-box h3 {
   text-align: center; }
 
-.rules-box p {
+.rules-box p, #reglas {
   margin-left: 10%;
   margin-right: 10%; }
 
@@ -62,7 +62,7 @@ main {
   main .container-img-index .img-index .container-img {
     display: flex;
     flex-direction: column;
-    background-color: #f09819;
+    background-color: #f0b665;
     border-radius: 15px 15px;
     padding-top: 5%;
     padding-bottom: 40%;
@@ -219,6 +219,39 @@ div.bloque {
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important; }
 
+#reglas div .nav-link.active {
+  background-color: #e4be6e; }
+
+#reglas div .rules-custom {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px; }
+
+#reglas div .pding-1 {
+  background-color: #00000007; }
+
+@media only screen and (max-width: 575px) {
+  #reglas div .pding-1 {
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    margin-bottom: 1.5rem; } }
+
+#reglas div div button:active {
+  background-color: #f1a239; }
+
+#reglas div .nav-link {
+  color: black !important; }
+
+#reglas div h3 {
+  color: #000; }
+
+#reglas div p {
+  color: #000; }
+
 .videohome {
   height: 100%;
   width: 100%;
@@ -340,7 +373,7 @@ footer {
   background-color: #dacab4;
   border-style: solid;
   border-radius: 20px;
-  border-color: rgb(124, 124, 124);
+  border-color: darkgrey;
   border-width: 4px;
   margin: 15px;
   transition: 0.5s;
@@ -379,7 +412,8 @@ footer {
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 100% auto;
-  color: white;
+  text-decoration: none;
+  color: black;
   border-radius: 25px;
   border: 0px;
   font-weight: 500;
@@ -395,6 +429,10 @@ footer {
     text-decoration: none; }
   .button-sv:active {
     transform: scale(0.95); }
+  .button-sv a {
+    color: #000; }
+  .button-sv a:hover {
+    color: #000; }
 
 .wbox-button {
   display: flex;
@@ -478,11 +516,12 @@ footer {
   background-color: black; }
 
 .navbar-nav a {
-  border-radius: 25px; }
+  border-radius: 10px; }
 
-.nav-hover-p:hover {
-  background: #cc7b00;
-  transition: .5s; }
+.nav-hover-p {
+  transition: 0s; }
+  .nav-hover-p:hover {
+    background: #cc7b00; }
 
 .active {
   color: #eebe76 !important; }
@@ -490,6 +529,12 @@ footer {
 .discord-text-pers {
   color: #7289da; }
   .discord-text-pers:hover {
+    border-bottom: #7289da 2px solid; }
+
+.discord-text-pers-2 {
+  color: #7289da;
+  font-size: 2rem; }
+  .discord-text-pers-2:hover {
     border-bottom: #7289da 2px solid; }
 
 .overlay {
@@ -533,7 +578,7 @@ footer {
 .encabezado-cmm {
   margin-left: 1.5rem;
   margin-top: 1.5rem; }
-  .encabezado-cmm h3 {
+  .encabezado-cmm h1 {
     font-size: 2rem;
     padding-bottom: 25px;
     font-weight: bold; }
@@ -568,11 +613,6 @@ footer {
       width: 100%; }
 
 @media only screen and (min-width: 769px) {
-  #reglas {
-    display: grid;
-    grid-template-areas: "boton reglas reglas"
- "boton reglas reglas"
- "boton reglas reglas"; }
   .main-button-cmm {
     grid-area: boton;
     background: black;
